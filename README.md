@@ -2,6 +2,9 @@
 PDC Project
 
 
-#### Note
-- Ran in issue with .git folder, will publish the package after resolved
-- Tried to Publish with a new repo, have some concerns, will take some time
+#### Note:
+```txt
+Delay in Publishing pip package because some more changes are needed in the style of running the script using multiprocessing,
+It's of no use to simple publish a package that's hard to use with imports.
+You can have fun with cli script, Relax and Enjoy Quarntine
+```
