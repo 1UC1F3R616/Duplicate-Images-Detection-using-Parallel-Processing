@@ -1,6 +1,14 @@
 # Duplicate-Images-Detection-using-Parallel-Processing
 PDC Project
 
+<p align="center">
+	<img src="https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Parallel-Processing/blob/master/Graphs/Analysing%20All%203%20Together.png" />
+	<h2 align="center"> Processing Speed Comparisons with Parallel Fundamentals </h2>
+	<h4 align="center"> Presentation link and Report are added <h4>
+</p>
+
+---
+<br>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 </br>
