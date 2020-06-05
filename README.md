@@ -65,7 +65,7 @@ You can have fun with cli script, Relax and Enjoy Quarntine
 
 </br>
 
-- Link to [Report](https://docs.google.com/document/d/1IfQG6V_7K5800j_VLyuYlQjG_dySTsZI9gxSW_zNxXo/edit?ts=5ed9bcb0)
+- Link to [Report]https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Parallel-Processing/blob/master/(J%20Component)%20Final%20Report.pdf)
 
 </br>
 
