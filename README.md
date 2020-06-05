@@ -4,7 +4,7 @@ PDC Project
 <p align="center">
 	<img src="https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Parallel-Processing/blob/master/Graphs/Analysing%20All%203%20Together.png" />
 	<h2 align="center"> Processing Speed Comparisons with Parallel Fundamentals </h2>
-	<h4 align="center"> Presentation link and Report are added <h4>
+	<h4 align="center"> Presentation link and Report are added | Workdone in very short time, Ton of work is left out<h4>
 </p>
 
 ---
@@ -26,6 +26,16 @@ PDC Project
 ## Functionalities
 
 - [x] Detect Duplicate Images
+
+<br>
+
+
+## Workleft
+
+- [ ] Pipeline to draw live Graphs
+- [ ] GUI to Play with Graphs Dynamically
+- [ ] Remove Rendundant code (Eariler we worked on similarity but later moved to plain matching for clear results)
+- [ ] Pipeline the data used for Generating Graphs as an easily intergratable Script
 
 <br>
 
@@ -56,3 +66,8 @@ You can have fun with cli script, Relax and Enjoy Quarntine
 </br>
 
 - Link to [Report](https://docs.google.com/document/d/1IfQG6V_7K5800j_VLyuYlQjG_dySTsZI9gxSW_zNxXo/edit?ts=5ed9bcb0)
+
+</br>
+
+[![LinkedIn](https://img.shields.io/static/v1.svg?label=Connect&message=@Kush&color=grey&logo=linkedin&labelColor=blue&style=social)](https://www.linkedin.com/in/kush-choudhary-567b38169?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDYkgbUGhTniMSRqOUkdN3A%3D%3D)
+[![LinkedIn](https://img.shields.io/static/v1.svg?label=Connect&message=@Dhruv&color=grey&logo=linkedin&labelColor=blue&style=social)](https://www.linkedin.com/in/dhruv-agarwal-043ab3179/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDYkgbUGhTniMSRqOUkdN3A%3D%3D)
