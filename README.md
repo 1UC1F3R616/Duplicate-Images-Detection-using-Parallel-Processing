@@ -50,7 +50,7 @@ git clone https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Paralle
 - directions to use cli script
 
 ```bash
-python3 ddi.py image_name.py
+python3 ddi.py image_name.extension (can be jpg,jpeg,png , gif etc)
 ```
 
 </br>
