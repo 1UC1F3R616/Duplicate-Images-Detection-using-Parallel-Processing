@@ -44,7 +44,16 @@ PDC Project
 - directions to install
 
 ```bash
-git clone https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Parallel-Processing.git
+git clone https://github.com/1UC1F3R616/Duplicate-Images-Detection-using-Parallel-Processing.git # or download archive manually.
+cd Duplicate-Images-Detection-using-Parallel-Processing
+python3 -m venv env # create env.
+source ./env/bin/activate # activate env -> this is for linux. For windows make a google search.
+pip install -r requirements.txt
+python ./Duplication\ Detecting\ Scripts/ddi.py ./images_in/duplicate.jpg # this will return similar images
+python ./Duplication\ Detecting\ Scripts/detect_duplicate_multiple_core.py ./images_in/duplicate.jpg # observe the time taken
+python ./Duplication\ Detecting\ Scripts/detect_duplicate_multiple_thread.py ./images_in/duplicate.jpg # observe the time taken
+python ./Duplication\ Detecting\ Scripts/detect_duplicate_single_core.py ./images_in/duplicate.jpg # observe the time taken
+python ./Duplication\ Detecting\ Scripts/detect_duplicates.py ./images_in/duplicate.jpg # observe the time taken
 ```
 
 - directions to use cli script
@@ -61,6 +70,11 @@ python3 ddi.py image_name.extension (can be jpg,jpeg,png , gif etc)
 Delay in Publishing pip package because some more changes are needed in the style of running the script using multiprocessing,
 It's of no use to simple publish a package that's hard to use with imports.
 You can have fun with cli script, Relax and Enjoy Quarntine
+```
+
+```txt
+This doesn't find similar images but exact similar images. It's not an AI Project so bare with this but you can set threshold to find almost similar images.
+BY threshold I mean a simple if check where not only (image_pixels_A - image_pixels_B == 0) are considerd similar but something like (image_pixels_A - image_pixels_B < 0.5).
 ```
 
 </br>

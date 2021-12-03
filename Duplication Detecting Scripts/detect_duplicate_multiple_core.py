@@ -3,16 +3,19 @@ import numpy as np
 import glob
 import time
 import multiprocessing
-import threading
+from os import path
 
+# setting up path
+basepath = path.dirname(__file__)
+
+# loading environment
+image_path = path.abspath(path.join(basepath, "../images_in", "duplicate.jpg")) # Image we are running these tests against.
 
 """
 Multiprocessing
 """
 
-
-image_name = 'c2.jpeg' # origional image path goes here
-original = cv2.imread(image_name) 
+original = cv2.imread(image_path) 
 
 
 
@@ -21,15 +24,14 @@ def find_duplicates(image_):
         try:
             image_to_compare = cv2.imread(image_)
             if original.shape == image_to_compare.shape:
-
-                difference = cv2.subtract(original, image_to_compare)
+                difference = cv2.subtract(original, image_to_compare) # set threshold here
                 b, g, r = cv2.split(difference)
 
                 if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
                     duplicates = image_
-
-
-                    sift = cv2.xfeatures2d.SIFT_create()
+                    
+                    # some operations that are not needed but added to simply consume some time for getting better results for observation.
+                    sift = cv2.SIFT_create()
                     kp_1, desc_1 = sift.detectAndCompute(original, None)
                     kp_2, desc_2 = sift.detectAndCompute(image_to_compare, None)
 
@@ -54,7 +56,7 @@ def find_duplicates(image_):
                     return duplicates
 
         except Exception as e:
-            pass
+            print('[!] {}'.format(e))
 
 
 

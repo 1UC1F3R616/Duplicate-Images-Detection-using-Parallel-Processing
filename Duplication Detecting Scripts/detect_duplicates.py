@@ -4,6 +4,13 @@ import glob
 import time
 import multiprocessing
 import threading
+from os import path
+
+# setting up path
+basepath = path.dirname(__file__)
+
+# loading environment
+image_path = path.abspath(path.join(basepath, "../images_in", "duplicate.jpg")) # Image we are running these tests against.
 
 """
 Sequentiall on single core
@@ -21,8 +28,8 @@ Sequentiall on single core
 # ## print(image_dir)
 
 
-# image_name = 'c2.jpeg' # origional image path goes here
-# original = cv2.imread(image_name) 
+# image_path = 'c2.jpeg' # origional image path goes here
+# original = cv2.imread(image_path) 
 
 
 # start_time = time.time()
@@ -36,7 +43,7 @@ Sequentiall on single core
 #             b, g, r = cv2.split(difference)
 
 #             if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
-#                 print(f'Duplicates Found: {image_name} is Duplicate of {image_}')
+#                 print(f'Duplicates Found: {image_path} is Duplicate of {image_}')
 
 
 #                 sift = cv2.xfeatures2d.SIFT_create()
@@ -76,8 +83,8 @@ Multiprocessing
 """
 
 
-# image_name = 'c2.jpeg' # origional image path goes here
-# original = cv2.imread(image_name) 
+# image_path = 'c2.jpeg' # origional image path goes here
+# original = cv2.imread(image_path) 
 
 
 
@@ -156,10 +163,7 @@ Multiprocessing
 Threading
 """
 
-
-
-image_name = 'c2.jpeg' # origional image path goes here
-original = cv2.imread(image_name) 
+original = cv2.imread(image_path) 
 
 
 
@@ -173,9 +177,9 @@ def find_duplicates(image_=''):
                 b, g, r = cv2.split(difference)
 
                 if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
-                    print(f'Duplicates Found: {image_name} is Duplicate of {image_}')
+                    print(f'Duplicates Found: {image_path} is Duplicate of {image_}')
 
-                    sift = cv2.xfeatures2d.SIFT_create()
+                    sift = cv2.SIFT_create()
                     kp_1, desc_1 = sift.detectAndCompute(original, None)
                     kp_2, desc_2 = sift.detectAndCompute(image_to_compare, None)
 
@@ -199,7 +203,7 @@ def find_duplicates(image_=''):
 
 
         except Exception as e:
-            pass
+            print('[!] {}'.format(e))
 
 
 
